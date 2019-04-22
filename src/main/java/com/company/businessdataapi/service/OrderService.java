@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -34,5 +33,14 @@ public class OrderService {
         }
 
         return orders;
+    }
+
+    public int deleteOrder(Long orderId) {
+        //TODO Implement DAO to replace this
+        String deleteQueryDetails = "delete from `order details` where OrderID = ?";
+        jdbcTemplate.update(deleteQueryDetails, orderId);
+        String deleteQueryOrder = "delete from orders where OrderID = ?";
+        int numUpdated = jdbcTemplate.update(deleteQueryOrder, orderId);
+        return numUpdated;
     }
 }

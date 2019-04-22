@@ -3,9 +3,7 @@ package com.company.businessdataapi;
 import com.company.businessdataapi.model.Order;
 import com.company.businessdataapi.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,9 @@ public class OrderController {
     public List<Order> getAllOrders(){
         return orderService.getAllorders();
     }
+
+    @CrossOrigin
+    @GetMapping("/deleteOrder/{orderId}")
+    public int delete(@PathVariable Long orderId) { return orderService.deleteOrder(orderId); }
 
 }
