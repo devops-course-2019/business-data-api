@@ -23,4 +23,8 @@ public class OrderController {
     @GetMapping("/deleteOrder/{orderId}")
     public int delete(@PathVariable Long orderId) { return orderService.deleteOrder(orderId); }
 
+    @CrossOrigin
+    @GetMapping("/addOrder/{customerId}/{productId}/")
+    public int add(@PathVariable String customerId, @PathVariable Long productId) { return orderService.addOrder(customerId, productId); }
+
 }

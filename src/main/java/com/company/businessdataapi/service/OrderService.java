@@ -43,4 +43,8 @@ public class OrderService {
         int numUpdated = jdbcTemplate.update(deleteQueryOrder, orderId);
         return numUpdated;
     }
+
+    public int addOrder(String customerId, Long productId) {
+        return 0;
+    }
 }
