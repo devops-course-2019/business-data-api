@@ -12,3 +12,6 @@ Inspecting the pom.xml you can see that a resources section is included which su
 Example of command line usage: mvn package resources:resources -Ddburl="actual database url" -Ddbuser="actual username" -Ddbpassword="actual password"
 
 2019-04-22 Added endpoint for deleting of orders based on orderID at /deleteOrder/{orderID}.
+
+2019-05-01 Changes to allow for test of CI/CD setup
+First test  
