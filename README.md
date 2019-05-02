@@ -15,4 +15,5 @@ Example of command line usage: mvn package resources:resources -Ddburl="actual d
 
 2019-05-01 Changes to allow for test of CI/CD setup
 First test
-Second test  
+Second test
+Third test
