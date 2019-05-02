@@ -17,3 +17,4 @@ Example of command line usage: mvn package resources:resources -Ddburl="actual d
 First test
 Second test
 Third test
+Forth test
